@@ -4,18 +4,21 @@ document.addEventListener("DOMContentLoaded", function(){
     let settimeout = document.querySelector(".settimeout");
     settimeout.textContent = 'This is Set Timeout.';
   }
-
-  setTimeout(waitFourSeconds, 2000);
+  setTimeout(waitFourSeconds, 800);
 
   let num = 0;
-  function incrementNumber() {
+  let incrementNumber = setInterval(function() {
     let setinterval = document.querySelector(".setinterval");
-
     setinterval.textContent = `The current number is: ${num}`;
     num++;
-  }
 
-  setInterval(incrementNumber, 1000);
+    if (num > 10) {
+      setinterval.className += " bold-this";
+      setinterval.textContent = "This interval has been cleared we will no longer update."
+      clearInterval(incrementNumber);
+    }
+  }, 250);
+
 
 
 });
