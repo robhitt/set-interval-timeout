@@ -17,4 +17,5 @@ document.addEventListener("DOMContentLoaded", function(){
 
   setInterval(incrementNumber, 1000);
 
+
 });
