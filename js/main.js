@@ -15,10 +15,9 @@ document.addEventListener("DOMContentLoaded", function(){
     if (num > 10) {
       setinterval.className += " bold-this";
       setinterval.textContent = "This interval has been cleared we will no longer update."
+      alert('hello you made it to 10!');
       clearInterval(incrementNumber);
     }
   }, 250);
-
-
 
 });
